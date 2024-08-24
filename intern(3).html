@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    section {
+      display: flex;
+      justify-content: center;
+      padding: 40px;
+    }
+
+    .container {
+      display: flex;
+      max-width: 1200px;
+      width: 100%;
+      background: #fff;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      border-radius: 15px;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .container:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .left, .right {
+      padding: 20px;
+    }
+
+    .left {
+      width: 50%;
+      border-right: 2px solid #ddd;
+      background-color: #fafafa;
+    }
+
+    .right {
+      width: 50%;
+      position: relative;
+    }
+
+    .main_image img {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s;
+    }
+
+    .main_image img:hover {
+      transform: scale(1.05);
+    }
+
+    .option {
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      padding-left: 10px;
+    }
+
+    .option img {
+      width: 90px;
+      height: 90px;
+      object-fit: cover;
+      border: 2px solid #ddd;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+
+    .option img:hover {
+      border-color: #333;
+      transform: scale(1.1);
+    }
+
+    .color {
+      display: flex;
+      margin-top: 20px;
+    }
+
+    .color span {
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      margin: 0 10px;
+      display: inline-block;
+      border: 2px solid #ddd;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+      transition: border-color 0.3s;
+    }
+
+    .color span:hover {
+      border-color: #333;
+    }
+
+    .add {
+      display: flex;
+      align-items: center;
+      margin: 20px 0;
+    }
+
+    .add span {
+      background: #eee;
+      border: 1px solid #ddd;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s, box-shadow 0.3s;
+    }
+
+    .add span:hover {
+      background: #ddd;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .add label {
+      margin: 0 20px;
+      font-size: 1.5em;
+      color: #333;
+    }
+
+    button {
+      background: #333;
+      color: #fff;
+      border: none;
+      padding: 15px 25px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 1.1em;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    button:hover {
+      background: #555;
+      transform: scale(1.05);
+    }
+
+    h3, h4, h5, p {
+      margin: 0;
+      padding: 0;
+    }
+
+    h3 {
+      margin: 100px 0 10px 0;
+      font-size: 1.8em;
+      font-family: 'Merriweather', serif;
+      font-weight: 700;
+      color: #333;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    h4 {
+      margin-bottom: 20px;
+      font-size: 1.4em;
+      color: #444;
+    }
+
+    p {
+      margin-bottom: 20px;
+      color: #777;
+      line-height: 1.6;
+    }
+
+    .product-title {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 4.5em;
+      margin-bottom: 20px;
+      text-align: center;
+      color: #444;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    .color-section {
+      margin-bottom: 40px;
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <div class="container">
+      <div class="left">
+        <div class="product-title">Scarlett</div>
+        <div class="main_image">
+          <img src="scarlett(bundle).jpg" class="slide" alt="Product Image">
+        </div>
+        <div class="option">
+          <img src="scarlett(stack).jpg" alt="Thumbnail 2">
+          <img src="scarlett(sun).jpg" alt="Thumbnail 3">
+          <img src="scarlett(neck stack).jpg" alt="Thumbnail 4">
+          <img src="scarlett(earbundle).jpg" alt="Thumbnail 5">
+        </div>
+      </div>
+      <div class="right">
+        <h3>EVIL EYE SET</h3>
+        <h4><small>$</small>999.99</h4>
+        <p>The "evil eye neck stack" is worn in many cultures to bring good luck and ward off misfortunes. Whether worn for its spiritual significance or simply for its beauty, this stunning necklace is sure to be an eye catcher in your daily stack, pun intended".</p>
+
+        <p>* 14k Gold Fill chain</p>
+        <p>* Gold Vermeil pendant with CZ stone</p>
+        <p>* Length: 17.5</p>
+        <h5>Color-Rose Gold</h5>
+
+        <div class="color color-section">
+          <span style="background-color: #DBB1A7;"></span>
+          <!-- Add more colors as needed -->
+        </div>
+        <h5>QUANTITY</h5>
+        <div class="add">
+          <span>-</span>
+          <label>1</label>
+          <span>+</span>
+        </div>
+        <button>Add to Bag</button>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>
